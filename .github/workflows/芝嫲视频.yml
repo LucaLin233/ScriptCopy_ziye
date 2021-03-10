@@ -1,13 +1,3 @@
-# 主要替换的字符
-
-# 小乐     //js名字
-# 0 0-15   //定时，如北京时间8到23点，设置0-15
-# XL_URL   //环境变量之一，47行处自行添加其他
-# aaa      //账号名
-# bbb      //仓库名
-# ZIYE     //分支名
-# Task/xiaole.js  //子文件地址
-
 name: 芝嫲视频
 
 on:
@@ -23,7 +13,6 @@ jobs:
     env:
         ZM_zhimabody: ${{ secrets.ZM_zhimabody }}
         ZM_CASH: ${{ secrets.ZM_CASH }}
-        
     steps:
       - name: Checkout
         run: |
@@ -44,7 +33,6 @@ jobs:
           cd ~/ScriptCopy_ziye
           node Task/zhima.js
         env:
-          
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
