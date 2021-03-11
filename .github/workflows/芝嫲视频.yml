@@ -12,7 +12,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         ZM_zhimabody: ${{ secrets.ZM_zhimabody }}
-        ZM_CASH: ${{ secrets.ZM_CASH }}
+        ZM_zhimatxbody: ${{ secrets.ZM_zhimatxbody }}
     steps:
       - name: Checkout
         run: |
