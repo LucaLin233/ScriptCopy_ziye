@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        zhimabodyVal: ${{ secrets.zhimabodyVal }}
-        zhimatxbodyVal: ${{ secrets.zhimatxbodyVal }}
+        ZM_zhimabody: ${{ secrets.ZM_zhimabody }}
+        ZM_CASH: ${{ secrets.ZM_CASH }}
     steps:
       - name: Checkout
         run: |
@@ -22,13 +22,13 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.zhimabodyVal
+        if: env.ZM_zhimabody
         run: |
           cd ~/ScriptCopy_ziye
           git checkout main
           npm install
       - name: '运行 【芝嫲视频】'
-        if: env.zhimabodyVal
+        if: env.ZM_zhimabody
         run: |
           cd ~/ScriptCopy_ziye
           node Task/zhima.js
