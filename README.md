@@ -1,2 +1,2 @@
 # ScriptCopy_ziye
-See U Later
+禁止fork，fork即block
